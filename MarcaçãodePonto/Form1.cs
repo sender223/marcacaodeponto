@@ -13,17 +13,12 @@ namespace MarcaçãodePonto {
             InitializeComponent();
         }
 
-        TimeSpan horaEntrada = new TimeSpan();
-        TimeSpan minutoEntrada = new TimeSpan();
+        TimeSpan horaEntrada = new TimeSpan();     
         TimeSpan horaAlmoco = new TimeSpan();
-        TimeSpan minutoAlmoco = new TimeSpan();
         TimeSpan qntHoraAlmoco = new TimeSpan();
-        TimeSpan qntMinutoAlmoco = new TimeSpan();
-
-        TimeSpan expedienteDiario = new TimeSpan(8, 40, 00);
-
+        TimeSpan qntHorasDiarias = new TimeSpan(8, 48, 00);
         
-
+        //TimeSpan expedienteDiario = qntHorasDiarias.Add(qntHoraAlmoco);
         TimeSpan retornoAlmoco = new TimeSpan();
         TimeSpan saidaExpediente = new TimeSpan();
 
@@ -39,23 +34,19 @@ namespace MarcaçãodePonto {
 
             string hEntrada = tbHoraEntrada.Text;
             horaEntrada = TimeSpan.Parse(hEntrada);
-            string mEntrada = tbMinutoEntrada.Text;
-            minutoEntrada = TimeSpan.Parse(mEntrada);
 
             string hAlmoco = tbHoraAlmoco.Text;
             horaAlmoco = TimeSpan.Parse(hAlmoco);
-            string mAlmoco = tbMinutoAlmoco.Text;
-            minutoAlmoco = TimeSpan.Parse(mAlmoco);
 
             string qntHAlmoco = tbQntHoraAlmoco.Text;
             qntHoraAlmoco = TimeSpan.Parse(hAlmoco);
-            string qntMAlmoco = tbQntMinutoAlmoco.Text;
-            qntMinutoAlmoco = TimeSpan.Parse(mAlmoco);
 
-            TimeSpan somaExpediente = horaEntrada + minutoEntrada - expedienteDiario;
+            TimeSpan expedienteDiario = qntHorasDiarias.Add(qntHoraAlmoco);
+
+            TimeSpan subExpediente = horaEntrada.Add(expedienteDiario);
 
 
-            lblSaidaExp.Text = somaExpediente.ToString();
+            lblSaidaExp.Text = subExpediente.ToString();
 
 
 
