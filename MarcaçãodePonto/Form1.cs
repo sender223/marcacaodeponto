@@ -48,8 +48,6 @@ namespace MarcaçãodePonto {
             lblAlmoco.Text = retornoAlmoco.ToString();
             lblSaidaExp.Text = expedienteTotal.ToString();
             
-
-
         }
 
         private void lblSaidaExp_Click(object sender, EventArgs e) {
