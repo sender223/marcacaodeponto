@@ -34,6 +34,9 @@
             this.mskHoraEntrada = new System.Windows.Forms.MaskedTextBox();
             this.mskHoraAlmoco = new System.Windows.Forms.MaskedTextBox();
             this.mskQntHoraAlmoco = new System.Windows.Forms.MaskedTextBox();
+            this.cbCargaHoraria = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -139,11 +142,42 @@
             this.mskQntHoraAlmoco.TabIndex = 22;
             this.mskQntHoraAlmoco.ValidatingType = typeof(System.DateTime);
             // 
+            // cbCargaHoraria
+            // 
+            this.cbCargaHoraria.FormattingEnabled = true;
+            this.cbCargaHoraria.Items.AddRange(new object[] {
+            "8h",
+            "8.48h"});
+            this.cbCargaHoraria.Location = new System.Drawing.Point(195, 11);
+            this.cbCargaHoraria.Name = "cbCargaHoraria";
+            this.cbCargaHoraria.Size = new System.Drawing.Size(121, 21);
+            this.cbCargaHoraria.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Selecione a Carga Horaria:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(66, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 339);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbCargaHoraria);
             this.Controls.Add(this.mskQntHoraAlmoco);
             this.Controls.Add(this.mskHoraAlmoco);
             this.Controls.Add(this.mskHoraEntrada);
@@ -174,6 +208,9 @@
         private System.Windows.Forms.MaskedTextBox mskHoraEntrada;
         private System.Windows.Forms.MaskedTextBox mskHoraAlmoco;
         private System.Windows.Forms.MaskedTextBox mskQntHoraAlmoco;
+        private System.Windows.Forms.ComboBox cbCargaHoraria;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

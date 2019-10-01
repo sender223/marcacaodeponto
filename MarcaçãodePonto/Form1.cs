@@ -16,10 +16,8 @@ namespace MarcaçãodePonto {
         TimeSpan horaEntrada = new TimeSpan();     
         TimeSpan horaAlmoco = new TimeSpan();
         TimeSpan qntHoraAlmoco = new TimeSpan();
-        TimeSpan qntHorasDiarias = new TimeSpan(8, 48, 00);
-        
-        TimeSpan retornoAlmoco = new TimeSpan();
-
+        TimeSpan qntHorasDiarias1 = new TimeSpan(8, 48, 00);
+        TimeSpan qntHorasDiarias2 = new TimeSpan(8, 00, 00);
 
         private void label1_Click(object sender, EventArgs e) {
 
@@ -31,22 +29,48 @@ namespace MarcaçãodePonto {
 
         private void btnCalcular_Click(object sender, EventArgs e) {
 
-            string hEntrada = mskHoraEntrada.Text;
-            horaEntrada = TimeSpan.Parse(hEntrada);
+            if (cbCargaHoraria.Text == "8h") {                
 
-            string hAlmoco = mskHoraAlmoco.Text;
-            horaAlmoco = TimeSpan.Parse(hAlmoco);
+                string hEntrada = mskHoraEntrada.Text;
+                horaEntrada = TimeSpan.Parse(hEntrada);
 
-            string qntHAlmoco = mskQntHoraAlmoco.Text;
-            qntHoraAlmoco = TimeSpan.Parse(qntHAlmoco);
+                string hAlmoco = mskHoraAlmoco.Text;
+                horaAlmoco = TimeSpan.Parse(hAlmoco);
 
-            TimeSpan expedienteDiario = qntHorasDiarias.Add(qntHoraAlmoco);
-            TimeSpan expedienteTotal = horaEntrada.Add(expedienteDiario);
+                string qntHAlmoco = mskQntHoraAlmoco.Text;
+                qntHoraAlmoco = TimeSpan.Parse(qntHAlmoco);
 
-            TimeSpan retornoAlmoco = horaAlmoco.Add(qntHoraAlmoco);
+                TimeSpan expedienteDiario = qntHorasDiarias2.Add(qntHoraAlmoco);
+                TimeSpan expedienteTotal = horaEntrada.Add(expedienteDiario);
 
-            lblAlmoco.Text = retornoAlmoco.ToString();
-            lblSaidaExp.Text = expedienteTotal.ToString();
+                TimeSpan retornoAlmoco = horaAlmoco.Add(qntHoraAlmoco);
+
+                lblAlmoco.Text = retornoAlmoco.ToString();
+                lblSaidaExp.Text = expedienteTotal.ToString();
+
+                label3.Text = " ";
+
+            }else if (cbCargaHoraria.Text == "8.48h") {
+                string hEntrada = mskHoraEntrada.Text;
+                horaEntrada = TimeSpan.Parse(hEntrada);
+
+                string hAlmoco = mskHoraAlmoco.Text;
+                horaAlmoco = TimeSpan.Parse(hAlmoco);
+
+                string qntHAlmoco = mskQntHoraAlmoco.Text;
+                qntHoraAlmoco = TimeSpan.Parse(qntHAlmoco);
+
+                TimeSpan expedienteDiario = qntHorasDiarias1.Add(qntHoraAlmoco);
+                TimeSpan expedienteTotal = horaEntrada.Add(expedienteDiario);
+
+                TimeSpan retornoAlmoco = horaAlmoco.Add(qntHoraAlmoco);
+
+                lblAlmoco.Text = retornoAlmoco.ToString();
+                lblSaidaExp.Text = expedienteTotal.ToString();
+
+                label3.Text = " ";
+            }
+            else { label3.Text = "Por favor Selecione a Carga Horaria para continuar!"; }            
             
         }
 
