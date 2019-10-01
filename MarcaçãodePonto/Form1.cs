@@ -18,9 +18,8 @@ namespace MarcaçãodePonto {
         TimeSpan qntHoraAlmoco = new TimeSpan();
         TimeSpan qntHorasDiarias = new TimeSpan(8, 48, 00);
         
-        //TimeSpan expedienteDiario = qntHorasDiarias.Add(qntHoraAlmoco);
         TimeSpan retornoAlmoco = new TimeSpan();
-        TimeSpan saidaExpediente = new TimeSpan();
+
 
         private void label1_Click(object sender, EventArgs e) {
 
@@ -32,22 +31,23 @@ namespace MarcaçãodePonto {
 
         private void btnCalcular_Click(object sender, EventArgs e) {
 
-            string hEntrada = tbHoraEntrada.Text;
+            string hEntrada = mskHoraEntrada.Text;
             horaEntrada = TimeSpan.Parse(hEntrada);
 
-            string hAlmoco = tbHoraAlmoco.Text;
+            string hAlmoco = mskHoraAlmoco.Text;
             horaAlmoco = TimeSpan.Parse(hAlmoco);
 
-            string qntHAlmoco = tbQntHoraAlmoco.Text;
-            qntHoraAlmoco = TimeSpan.Parse(hAlmoco);
+            string qntHAlmoco = mskQntHoraAlmoco.Text;
+            qntHoraAlmoco = TimeSpan.Parse(qntHAlmoco);
 
             TimeSpan expedienteDiario = qntHorasDiarias.Add(qntHoraAlmoco);
+            TimeSpan expedienteTotal = horaEntrada.Add(expedienteDiario);
 
-            TimeSpan subExpediente = horaEntrada.Add(expedienteDiario);
+            TimeSpan retornoAlmoco = horaAlmoco.Add(qntHoraAlmoco);
 
-
-            lblSaidaExp.Text = subExpediente.ToString();
-
+            lblAlmoco.Text = retornoAlmoco.ToString();
+            lblSaidaExp.Text = expedienteTotal.ToString();
+            
 
 
         }
