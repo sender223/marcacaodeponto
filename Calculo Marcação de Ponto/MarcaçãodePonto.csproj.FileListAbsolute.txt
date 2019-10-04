@@ -1,0 +1,9 @@
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\bin\Debug\MarcaçãodePonto.exe
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\bin\Debug\MarcaçãodePonto.pdb
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.csprojAssemblyReference.cache
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.Form1.resources
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.Properties.Resources.resources
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.csproj.GenerateResource.cache
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.csproj.CoreCompileInputs.cache
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.exe
+C:\Users\Sender\Desktop\marcacaodeponto\MarcaçãodePonto\obj\Debug\MarcaçãodePonto.pdb

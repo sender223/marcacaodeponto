@@ -62,11 +62,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 293);
+            this.label7.Location = new System.Drawing.Point(61, 293);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 13);
+            this.label7.Size = new System.Drawing.Size(118, 13);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Você deve retornar do almoço as:  ";
+            this.label7.Text = "Horas feitas de almoço:";
             // 
             // label8
             // 
@@ -99,11 +99,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(105, 187);
+            this.label13.Location = new System.Drawing.Point(89, 187);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(161, 13);
+            this.label13.Size = new System.Drawing.Size(191, 13);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Qantidade de Horas de Almoço: ";
+            this.label13.Text = "Digite o Horario de Retorno do almoço:";
             // 
             // btnCalcular
             // 
@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 39);
+            this.label3.Location = new System.Drawing.Point(64, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 25;
